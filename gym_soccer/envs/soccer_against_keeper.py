@@ -1,9 +1,10 @@
 import logging
 from gym_soccer.envs.soccer_empty_goal import SoccerEmptyGoalEnv
+from gym_soccer.envs.soccer_score_goal import SoccerScoreGoalEnv
 
 logger = logging.getLogger(__name__)
 
-class SoccerAgainstKeeperEnv(SoccerEmptyGoalEnv):
+class SoccerAgainstKeeperEnv(SoccerScoreGoalEnv):
     """
     SoccerAgainstKeeper initializes the agent most of the way down the
     field with the ball and tasks it with scoring on a keeper.

@@ -20,8 +20,16 @@ register(
 )
 
 register(
+    id='SoccerScoreGoal-v0',
+    entry_point='gym_soccer.envs:SoccerScoreGoalEnv',
+    timestep_limit=1000,
+    reward_threshold=10.0,
+    nondeterministic = True,
+)
+
+register(
     id='SoccerAgainstKeeper-v0',
-    entry_point='gym.envs:SoccerAgainstKeeperEnv',
+    entry_point='gym_soccer.envs:SoccerAgainstKeeperEnv',
     timestep_limit=1000,
     reward_threshold=8.0,
     nondeterministic = True,
